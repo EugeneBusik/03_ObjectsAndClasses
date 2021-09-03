@@ -23,5 +23,6 @@ public class Loader {
             cat4.meow();
             System.out.println(cat4.getStatus());
         }
+
     }
 }
