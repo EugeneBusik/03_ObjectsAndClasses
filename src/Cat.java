@@ -16,46 +16,38 @@ public class Cat {
         minWeight = 1000.0;
         maxWeight = 9000.0;
         food = 0.0;
-        count = count + 1;// Lesson 3
+        count = count + 1;
     }
-
-    public Integer meow() {
+    public void meow(){
         if (weight >= minWeight) {
             weight = weight - 1;
             System.out.println("Meow");
-        if (weight <= minWeight) {
-            count = count - 1;
-            }
-        }return count;
+            if (weight <= minWeight)
+                count = count - 1;
+        }
     }
-
-    public Integer pee (){
+    public void pee (){
         if (weight >= minWeight) {
             weight = weight - 50;
             System.out.println("The сat pee successfully");
-            if (weight <= minWeight){
-                count = count - 1;
-            }
-        }return count;
+            if (weight <= minWeight)
+            count = count - 1;
+        }
     }
-
-    public Integer feed(Double amount){
+    public void feed(Double amount) {
         if (weight <= maxWeight) {
             weight = weight + amount;
             food = amount;
-            if (weight >= maxWeight){
+            if (weight >= maxWeight)
                 count = count - 1;
-            }
-        }return count;
+        }
     }
-
-    public Integer drink (Double amount) {
+    public void drink (Double amount) {
         if (weight <= maxWeight) {
             weight = weight + amount;
-            if (weight >= maxWeight) {
+            if (weight >= maxWeight)
                 count = count - 1;
-            }
-        }return count;
+        }
     }
 
     public Double getWeight(){return weight;}
