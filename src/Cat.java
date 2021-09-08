@@ -37,7 +37,7 @@ public class Cat {
     public void feed(Double amount) {
         if (weight <= maxWeight) {
             weight = weight + amount;
-            food = amount;
+            food += amount;
             if (weight >= maxWeight)
                 count = count - 1;
         }
