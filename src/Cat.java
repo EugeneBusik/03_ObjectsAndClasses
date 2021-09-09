@@ -19,36 +19,38 @@ public class Cat {
         count = count + 1;
     }
     public void meow(){
-        if (weight >= minWeight) {
+        if (getCheck()) {
             weight = weight - 1;
             System.out.println("Meow");
-            if (weight <= minWeight)
+            if (!getCheck())
                 count = count - 1;
         }
     }
     public void pee (){
-        if (weight >= minWeight) {
+        if (getCheck()) {
             weight = weight - 50;
             System.out.println("The сat pee successfully");
-            if (weight <= minWeight)
-            count = count - 1;
+            if (!getCheck())
+                count = count - 1;
         }
     }
     public void feed(Double amount) {
-        if (weight <= maxWeight) {
+        if (getCheck()) {
             weight = weight + amount;
             food += amount;
-            if (weight >= maxWeight)
+            if (!getCheck())
                 count = count - 1;
         }
     }
     public void drink (Double amount) {
-        if (weight <= maxWeight) {
+        if (getCheck()) {
             weight = weight + amount;
-            if (weight >= maxWeight)
+            if (!getCheck())
                 count = count - 1;
         }
     }
+
+    public boolean getCheck(){return minWeight <= weight && weight <= maxWeight;}
 
     public Double getWeight(){return weight;}
 
