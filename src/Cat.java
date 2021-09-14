@@ -4,8 +4,9 @@ public class Cat {
     private double originWeight;
     private double weight;
 
-    private double minWeight;
-    private double maxWeight;
+    private static final double minWeight = 1000.00;
+    private static final double maxWeight = 9000.00;
+    private static final int numberOfEyes = 2;
     private double food;
 
     static int count = 0;
@@ -13,8 +14,6 @@ public class Cat {
     public Cat() {
         weight = 1500.0 + 3000.0 * Math.random();
         originWeight = weight;
-        minWeight = 1000.0;
-        maxWeight = 9000.0;
         food = 0.0;
         count = count + 1;
     }
