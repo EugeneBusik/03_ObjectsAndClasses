@@ -17,6 +17,10 @@ public class Cat {
         food = 0.0;
         count = count + 1;
     }
+    public Cat(double weight) {
+        this.weight = weight;
+    }
+
     public void meow(){
         if (getCheck()) {
             weight = weight - 1;
